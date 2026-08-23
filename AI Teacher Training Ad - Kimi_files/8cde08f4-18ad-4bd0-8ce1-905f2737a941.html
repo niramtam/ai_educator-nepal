@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)blob:https://www.kimi.ai/8cde08f4-18ad-4bd0-8ce1-905f2737a941 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Educators - Online Training Course Nepal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .ad-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+        }
+        .badge-strip {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 700;
+        }
+        .hero h1 {
+            font-size: 2.2em;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .hero .subtitle {
+            font-size: 1.15em;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .price-box {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+            padding: 25px;
+            border-radius: 16px;
+            margin: 25px 0;
+            position: relative;
+        }
+        .price-box .was {
+            text-decoration: line-through;
+            opacity: 0.8;
+            font-size: 1.1em;
+        }
+        .price-box .now {
+            font-size: 3em;
+            font-weight: 800;
+            margin: 5px 0;
+        }
+        .price-box .note {
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+        .urgency {
+            background: #fff3cd;
+            border: 2px dashed #ffc107;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-weight: 600;
+            color: #856404;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-decoration: none;
+            margin: 15px 0;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+            transition: transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover { transform: translateY(-3px); }
+        .features {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .features h2 {
+            text-align: center;
+            color: #1a1a2e;
+            margin-bottom: 25px;
+            font-size: 1.5em;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 600px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.6em; }
+            .price-box .now { font-size: 2.2em; }
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 12px;
+        }
+        .feature-icon {
+            font-size: 1.8em;
+            flex-shrink: 0;
+        }
+        .feature-text strong {
+            display: block;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+        .feature-text span {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .pain-points {
+            background: #1a1a2e;
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 25px;
+        }
+        .pain-points h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        .pain-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        @media (max-width: 600px) { .pain-grid { grid-template-columns: 1fr; } }
+        .pain-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .pain-item .emoji { font-size: 2em; display: block; margin-bottom: 8px; }
+        .testimonial {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 25px;
+            text-align: center;
+        }
+        .testimonial blockquote {
+            font-style: italic;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .testimonial .author {
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .testimonial .role {
+            font-size: 0.9em;
+            color: #888;
+        }
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-top: 25px;
+            text-align: center;
+        }
+        .final-cta h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .guarantee {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9em;
+        }
+        .countdown {
+            background: #ff4757;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+        .stars {
+            color: #ffd700;
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+    </style>
+<!--<base target="_blank">--><base href="." target="_blank">
+</head>
+<body>
+    <div class="ad-container">
+
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <div class="badge-strip">
+                <span class="badge">🇳🇵 Made for Nepal</span>
+                <span class="badge">🎓 Teachers Only</span>
+                <span class="badge">💻 100% Online</span>
+                <span class="badge">⚡ Just 5 Days</span>
+            </div>
+
+            <h1>🤖 Stop Spending Sundays Planning Lessons.<br>Let AI Do the Heavy Lifting.</h1>
+            <p class="subtitle">
+                Master ChatGPT, Canva, NotebookLM &amp; more in just <strong>5 days × 3 hours</strong>. 
+                Create differentiated lessons, auto-grade rubrics, and stunning visuals — 
+                while saving <strong>5+ hours every week</strong>.
+            </p>
+
+            <div class="stars">⭐⭐⭐⭐⭐ Rated 4.9/5 by 200+ Nepali Teachers</div>
+
+            <div class="price-box">
+                <div class="was">Was Rs. 4,999</div>
+                <div class="now">Rs. 1,999 only</div>
+                <div class="note">🎉 Early Bird Offer | Limited to First 50 Teachers</div>
+            </div>
+
+            <div class="countdown">
+                ⏰ Next Batch: September 1-5, 2026 | Registration Closes in 7 Days!
+            </div>
+
+            <div class="urgency">
+                🚨 <strong>Why pay Rs. 4,999 later?</strong> Lock in the Rs. 1,999 price today. 
+                This is less than the cost of one tuition class — but transforms your entire teaching career.
+            </div>
+
+            <a href="blob:https://www.kimi.ai/8cde08f4-18ad-4bd0-8ce1-905f2737a941#register" class="cta-button">👉 YES! I Want to Join Now</a>
+            <p style="font-size: 0.85em; color: #888; margin-top: 10px;">
+                🔒 Secure Payment via eSewa/Khalti | Instant Confirmation
+            </p>
+        </div>
+
+        <!-- PAIN POINTS -->
+        <div class="pain-points">
+            <h2>😫 Does This Sound Like Your Weekly Struggle?</h2>
+            <div class="pain-grid">
+                <div class="pain-item">
+                    <span class="emoji">😩</span>
+                    <strong>Sunday Night Panic?</strong><br>
+                    Spending 4+ hours planning lessons for the week?
+                </div>
+                <div class="pain-item">
+                    <span class="emoji">😵</span>
+                    <strong>One Textbook, 35 Students?</strong><br>
+                    Can't differentiate for slow, average &amp; advanced learners?
+                </div>
+                <div class="pain-item">
+                    <span class="emoji">😤</span>
+                    <strong>Boring Slides?</strong><br>
+                    Students sleeping through your PowerPoints?
+                </div>
+                <div class="pain-item">
+                    <span class="emoji">🤯</span>
+                    <strong>Drowning in Admin?</strong><br>
+                    Report cards, emails, meetings eating your teaching time?
+                </div>
+                <div class="pain-item">
+                    <span class="emoji">😰</span>
+                    <strong>AI Confusion?</strong><br>
+                    Heard of ChatGPT but don't know where to start?
+                </div>
+                <div class="pain-item">
+                    <span class="emoji">😔</span>
+                    <strong>No School Policy?</strong><br>
+                    Students using AI to cheat and you have no rules?
+                </div>
+            </div>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="features">
+            <h2>✨ What You'll Master in Just 5 Days</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">⚡</span>
+                    <div class="feature-text">
+                        <strong>Prompt Engineering Magic</strong>
+                        <span>Talk to AI like a pro. Get perfect lesson plans, emails &amp; rubrics in seconds — not hours.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎯</span>
+                    <div class="feature-text">
+                        <strong>3-Level Differentiation</strong>
+                        <span>Auto-create simplified, standard &amp; advanced versions of every lesson for mixed-ability classes.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎨</span>
+                    <div class="feature-text">
+                        <strong>Stunning Visuals in Minutes</strong>
+                        <span>Use Canva AI &amp; Nano Banana to design infographics, posters &amp; presentations — zero design skills needed.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎮</span>
+                    <div class="feature-text">
+                        <strong>Game-Based Learning</strong>
+                        <span>Build Kahoot/Quizizz games, escape rooms &amp; interactive activities that students actually enjoy.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📊</span>
+                    <div class="feature-text">
+                        <strong>AI-Powered Rubrics</strong>
+                        <span>Generate detailed assessment rubrics with 4 performance levels — aligned to CDC Nepal standards.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <div class="feature-text">
+                        <strong>Ethics &amp; School Policy</strong>
+                        <span>Learn the "Traffic Light" system. Draft your school's first AI policy. Keep students safe.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔬</span>
+                    <div class="feature-text">
+                        <strong>Research with NotebookLM</strong>
+                        <span>Upload documents, get cited summaries, create podcast-style revision audio for students.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🇳🇵</span>
+                    <div class="feature-text">
+                        <strong>Built for Nepali Schools</strong>
+                        <span>Low-bandwidth friendly. Nepali + English bilingual. Aligned to CDC curriculum. Local examples.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TESTIMONIAL -->
+        <div class="testimonial">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <blockquote>
+                "I used to spend my entire Sunday planning. Now I create differentiated lessons for all 5 sections in under 30 minutes. 
+                My students are more engaged than ever. This course paid for itself in the first week!"
+            </blockquote>
+            <div class="author">— Sunita Sharma</div>
+            <div class="role">Grade 8 Science Teacher, Kathmandu</div>
+        </div>
+
+        <!-- HOW IT WORKS -->
+        <div class="features">
+            <h2>📅 How the 5-Day Online Program Works</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">💻</span>
+                    <div class="feature-text">
+                        <strong>Live on Zoom/Meet</strong>
+                        <span>3 hours daily (4:00 PM - 7:00 PM NPT). Interactive, not boring lectures.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎲</span>
+                    <div class="feature-text">
+                        <strong>Game-Driven Learning</strong>
+                        <span>Kahoot battles, escape rooms, prompt tournaments, design sprints. Learn by playing.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">👥</span>
+                    <div class="feature-text">
+                        <strong>Small Group Breakouts</strong>
+                        <span>Collaborate with teachers from across Nepal. Share ideas, solve problems together.</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎓</span>
+                    <div class="feature-text">
+                        <strong>Digital Certificate</strong>
+                        <span>Receive a verified certificate upon completion. Add it to your CV and school records.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHAT YOU GET -->
+        <div class="features" style="background: linear-gradient(135deg, #fff9e6, #fff3cd);">
+            <h2>🎁 Everything Included for Just Rs. 1,999</h2>
+            <div style="text-align: left; max-width: 500px; margin: 0 auto;">
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ 15 hours of live interactive training</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ Access to all AI tools (free education accounts)</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ 50+ ready-to-use prompt templates</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ Downloadable lesson plan templates</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ Rubric &amp; assessment toolkit</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ School AI policy template</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ WhatsApp support community</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ Session recordings for 3 months</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ Monthly follow-up "AI Coffee Chats"</p>
+                <p style="margin: 10px 0; font-size: 1.05em;">✅ <strong>BONUS:</strong> "AI Tools Cheat Sheet" PDF</p>
+            </div>
+            <p style="text-align: center; margin-top: 20px; color: #856404; font-weight: 600;">
+                💰 Total Value: Rs. 12,000+ | You Pay: Rs. 1,999
+            </p>
+        </div>
+
+        <!-- FINAL CTA -->
+        <div class="final-cta" id="register">
+            <h2>🚀 Ready to Transform Your Teaching?</h2>
+            <p style="font-size: 1.1em; margin-bottom: 20px;">
+                Join 200+ teachers who have already cut their planning time in half.<br>
+                Your students deserve engaging, personalized lessons. You deserve your Sundays back.
+            </p>
+
+            <div class="price-box" style="background: rgba(255,255,255,0.2); margin: 20px auto; max-width: 350px;">
+                <div class="now" style="font-size: 2.5em;">Rs. 1,999</div>
+                <div class="note">One-time payment. No hidden fees.</div>
+            </div>
+
+            <a href="blob:https://www.kimi.ai/8cde08f4-18ad-4bd0-8ce1-905f2737a941#" class="cta-button" style="font-size: 1.4em; padding: 20px 60px;">
+                🎯 REGISTER NOW — ONLY 12 SEATS LEFT!
+            </a>
+
+            <div class="guarantee">
+                <span>🛡️</span>
+                <span><strong>100% Satisfaction Guarantee</strong> — Not happy after Day 1? Full refund, no questions.</span>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">
+                📞 Questions? Call/WhatsApp: 98XXXXXXXX<br>
+                📧 Email: aiworkshop@school.edu.np
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>🇳🇵 AI for Educators: Empowering Teachers Nepal | Primary, Secondary &amp; Higher Secondary</p>
+            <p style="margin-top: 8px;">"AI enhances teaching. Your creativity, empathy &amp; dedication remain irreplaceable."</p>
+        </div>
+
+    </div>
+
+</body></html>
